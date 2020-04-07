@@ -9,5 +9,6 @@ target 'inchurch-ios-challenge' do
   pod 'AlamofireObjectMapper'
   pod 'RealmSwift'
   pod 'Kingfisher'
+  pod 'Reusable'
   
 end
