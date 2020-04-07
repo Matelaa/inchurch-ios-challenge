@@ -48,7 +48,6 @@
 				0A4DF8BC6F48D5A92CC4AD49 /* Pods-inchurch-ios-challenge.debug.xcconfig */,
 				AE7F325BBCBC8B340433BB67 /* Pods-inchurch-ios-challenge.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -58,6 +57,53 @@
 				ADAF82B066978D671283B05F /* Pods_inchurch_ios_challenge.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		F2194CA5243C10BC000A068E /* Application */ = {
+			isa = PBXGroup;
+			children = (
+				F26E04CF243C0D7B0008CCDF /* SceneDelegate.swift */,
+				F26E04CD243C0D7B0008CCDF /* AppDelegate.swift */,
+			);
+			path = Application;
+			sourceTree = "<group>";
+		};
+		F2194CA7243C119E000A068E /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				F26E04D1243C0D7B0008CCDF /* ViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		F2194CA8243C11AE000A068E /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		F2194CA9243C11BC000A068E /* Service */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Service;
+			sourceTree = "<group>";
+		};
+		F2194CAA243C11C6000A068E /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		F2194CAB243C1218000A068E /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				F26E04D3243C0D7B0008CCDF /* Main.storyboard */,
+				F26E04D8243C0D7C0008CCDF /* LaunchScreen.storyboard */,
+			);
+			path = Base;
 			sourceTree = "<group>";
 		};
 		F26E04C1243C0D7B0008CCDF = {
@@ -81,12 +127,13 @@
 		F26E04CC243C0D7B0008CCDF /* inchurch-ios-challenge */ = {
 			isa = PBXGroup;
 			children = (
-				F26E04CD243C0D7B0008CCDF /* AppDelegate.swift */,
-				F26E04CF243C0D7B0008CCDF /* SceneDelegate.swift */,
-				F26E04D1243C0D7B0008CCDF /* ViewController.swift */,
-				F26E04D3243C0D7B0008CCDF /* Main.storyboard */,
+				F2194CA5243C10BC000A068E /* Application */,
+				F2194CAB243C1218000A068E /* Base */,
+				F2194CA7243C119E000A068E /* Controllers */,
+				F2194CA8243C11AE000A068E /* Model */,
+				F2194CA9243C11BC000A068E /* Service */,
+				F2194CAA243C11C6000A068E /* ViewModel */,
 				F26E04D6243C0D7C0008CCDF /* Assets.xcassets */,
-				F26E04D8243C0D7C0008CCDF /* LaunchScreen.storyboard */,
 				F26E04DB243C0D7C0008CCDF /* Info.plist */,
 			);
 			path = "inchurch-ios-challenge";
