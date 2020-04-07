@@ -75,8 +75,6 @@
 				F293F1D8243C1BDD000F15DA /* Resources */,
 				F26E04CF243C0D7B0008CCDF /* SceneDelegate.swift */,
 				F26E04CD243C0D7B0008CCDF /* AppDelegate.swift */,
-				F293F1D9243C1BF3000F15DA /* Generators */,
-				F293F1E5243C1F10000F15DA /* Generated */,
 			);
 			path = Application;
 			sourceTree = "<group>";
@@ -154,6 +152,8 @@
 		F293F1D8243C1BDD000F15DA /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				F293F1D9243C1BF3000F15DA /* Generators */,
+				F293F1E5243C1F10000F15DA /* Generated */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -165,7 +165,8 @@
 				F2F21D18243C21AB0016EA4C /* colors.txt */,
 				F2F21D16243C21AB0016EA4C /* Localizable.strings */,
 			);
-			path = Generators;
+			name = Generators;
+			path = ../Generators;
 			sourceTree = "<group>";
 		};
 		F293F1E5243C1F10000F15DA /* Generated */ = {
@@ -175,7 +176,8 @@
 				F2F21D1E243C21C40016EA4C /* Colors.swift */,
 				F2F21D1C243C21C40016EA4C /* Strings.swift */,
 			);
-			path = Generated;
+			name = Generated;
+			path = ../Generated;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
