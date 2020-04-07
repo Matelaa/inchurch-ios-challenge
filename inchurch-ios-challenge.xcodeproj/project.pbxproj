@@ -10,9 +10,10 @@
 		D0AFDA4C8A2727B2A56D432C /* Pods_inchurch_ios_challenge.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ADAF82B066978D671283B05F /* Pods_inchurch_ios_challenge.framework */; };
 		F26E04CE243C0D7B0008CCDF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F26E04CD243C0D7B0008CCDF /* AppDelegate.swift */; };
 		F26E04D0243C0D7B0008CCDF /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F26E04CF243C0D7B0008CCDF /* SceneDelegate.swift */; };
-		F26E04D2243C0D7B0008CCDF /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F26E04D1243C0D7B0008CCDF /* ViewController.swift */; };
-		F26E04D5243C0D7B0008CCDF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F26E04D3243C0D7B0008CCDF /* Main.storyboard */; };
+		F26E04D2243C0D7B0008CCDF /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F26E04D1243C0D7B0008CCDF /* HomeViewController.swift */; };
 		F26E04DA243C0D7C0008CCDF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F26E04D8243C0D7C0008CCDF /* LaunchScreen.storyboard */; };
+		F2D8E6B1243C348C00D03FC1 /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2D8E6B0243C348C00D03FC1 /* TabBarController.swift */; };
+		F2D8E6B3243C34EC00D03FC1 /* FavoritesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2D8E6B2243C34EC00D03FC1 /* FavoritesViewController.swift */; };
 		F2F21D19243C21AB0016EA4C /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = F2F21D16243C21AB0016EA4C /* Localizable.strings */; };
 		F2F21D1A243C21AB0016EA4C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F2F21D17243C21AB0016EA4C /* Assets.xcassets */; };
 		F2F21D1B243C21AB0016EA4C /* colors.txt in Resources */ = {isa = PBXBuildFile; fileRef = F2F21D18243C21AB0016EA4C /* colors.txt */; };
@@ -28,10 +29,11 @@
 		F26E04CA243C0D7B0008CCDF /* inchurch-ios-challenge.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "inchurch-ios-challenge.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F26E04CD243C0D7B0008CCDF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F26E04CF243C0D7B0008CCDF /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		F26E04D1243C0D7B0008CCDF /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		F26E04D4243C0D7B0008CCDF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		F26E04D1243C0D7B0008CCDF /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		F26E04D9243C0D7C0008CCDF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F26E04DB243C0D7C0008CCDF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F2D8E6B0243C348C00D03FC1 /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
+		F2D8E6B2243C34EC00D03FC1 /* FavoritesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesViewController.swift; sourceTree = "<group>"; };
 		F2F21D16243C21AB0016EA4C /* Localizable.strings */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; name = Localizable.strings; path = "inchurch-ios-challenge/Application/Resources/Generators/Localizable.strings"; sourceTree = SOURCE_ROOT; };
 		F2F21D17243C21AB0016EA4C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = "inchurch-ios-challenge/Application/Resources/Generators/Assets.xcassets"; sourceTree = SOURCE_ROOT; };
 		F2F21D18243C21AB0016EA4C /* colors.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = colors.txt; path = "inchurch-ios-challenge/Application/Resources/Generators/colors.txt"; sourceTree = SOURCE_ROOT; };
@@ -72,9 +74,9 @@
 		F2194CA5243C10BC000A068E /* Application */ = {
 			isa = PBXGroup;
 			children = (
-				F293F1D8243C1BDD000F15DA /* Resources */,
 				F26E04CF243C0D7B0008CCDF /* SceneDelegate.swift */,
 				F26E04CD243C0D7B0008CCDF /* AppDelegate.swift */,
+				F293F1D8243C1BDD000F15DA /* Resources */,
 			);
 			path = Application;
 			sourceTree = "<group>";
@@ -82,7 +84,9 @@
 		F2194CA7243C119E000A068E /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				F26E04D1243C0D7B0008CCDF /* ViewController.swift */,
+				F2D8E6B0243C348C00D03FC1 /* TabBarController.swift */,
+				F2EBF750243CF19300ADE462 /* Favorites */,
+				F2EBF74F243CF17400ADE462 /* Home */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -111,7 +115,6 @@
 		F2194CAB243C1218000A068E /* Base */ = {
 			isa = PBXGroup;
 			children = (
-				F26E04D3243C0D7B0008CCDF /* Main.storyboard */,
 				F26E04D8243C0D7C0008CCDF /* LaunchScreen.storyboard */,
 			);
 			path = Base;
@@ -180,6 +183,22 @@
 			path = ../Generated;
 			sourceTree = "<group>";
 		};
+		F2EBF74F243CF17400ADE462 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				F26E04D1243C0D7B0008CCDF /* HomeViewController.swift */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		F2EBF750243CF19300ADE462 /* Favorites */ = {
+			isa = PBXGroup;
+			children = (
+				F2D8E6B2243C34EC00D03FC1 /* FavoritesViewController.swift */,
+			);
+			path = Favorites;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -244,7 +263,6 @@
 				F2F21D1B243C21AB0016EA4C /* colors.txt in Resources */,
 				F26E04DA243C0D7C0008CCDF /* LaunchScreen.storyboard in Resources */,
 				F2F21D1A243C21AB0016EA4C /* Assets.xcassets in Resources */,
-				F26E04D5243C0D7B0008CCDF /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -298,10 +316,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F26E04D2243C0D7B0008CCDF /* ViewController.swift in Sources */,
+				F2D8E6B3243C34EC00D03FC1 /* FavoritesViewController.swift in Sources */,
+				F26E04D2243C0D7B0008CCDF /* HomeViewController.swift in Sources */,
 				F2F21D21243C21C40016EA4C /* Colors.swift in Sources */,
 				F2F21D20243C21C40016EA4C /* Assets.swift in Sources */,
 				F26E04CE243C0D7B0008CCDF /* AppDelegate.swift in Sources */,
+				F2D8E6B1243C348C00D03FC1 /* TabBarController.swift in Sources */,
 				F26E04D0243C0D7B0008CCDF /* SceneDelegate.swift in Sources */,
 				F2F21D1F243C21C40016EA4C /* Strings.swift in Sources */,
 			);
@@ -310,14 +330,6 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		F26E04D3243C0D7B0008CCDF /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				F26E04D4243C0D7B0008CCDF /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		F26E04D8243C0D7C0008CCDF /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (

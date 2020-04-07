@@ -13,8 +13,18 @@ import Foundation
 internal enum L10n {
 
   internal enum App {
-    /// Inchurch
+    /// Movies
     internal static let title = L10n.tr("Localizable", "app.title")
+  }
+
+  internal enum Favorites {
+    /// Favorites
+    internal static let title = L10n.tr("Localizable", "favorites.title")
+  }
+
+  internal enum Home {
+    /// Home
+    internal static let title = L10n.tr("Localizable", "home.title")
   }
 }
 // swiftlint:enable explicit_type_interface function_parameter_count identifier_name line_length

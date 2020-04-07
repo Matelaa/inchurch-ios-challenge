@@ -1,5 +1,5 @@
 //
-//  ViewController.swift
+//  HomeViewController.swift
 //  inchurch-ios-challenge
 //
 //  Created by matela on 06/04/20.
@@ -8,10 +8,12 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class HomeViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.title = L10n.Home.title
+        self.view.backgroundColor = .white
     }
 }
 

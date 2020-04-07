@@ -1,1 +1,6 @@
-"app.title" = "Inchurch";
+// App Name
+"app.title" = "Movies";
+
+// Screens Titles
+"home.title" = "Home";
+"favorites.title" = "Favorites";
