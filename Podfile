@@ -5,5 +5,9 @@ target 'inchurch-ios-challenge' do
   use_frameworks!
 
   pod 'SwiftGen'
-
+  pod 'Alamofire'
+  pod 'AlamofireObjectMapper'
+  pod 'RealmSwift'
+  pod 'Kingfisher'
+  
 end

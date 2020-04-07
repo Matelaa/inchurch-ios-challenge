@@ -211,6 +211,7 @@
 				F26E04C6243C0D7B0008CCDF /* Sources */,
 				F26E04C7243C0D7B0008CCDF /* Frameworks */,
 				F26E04C8243C0D7B0008CCDF /* Resources */,
+				9B2A0310915C7F5E5DF8B579 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -269,6 +270,23 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		9B2A0310915C7F5E5DF8B579 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-inchurch-ios-challenge/Pods-inchurch-ios-challenge-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-inchurch-ios-challenge/Pods-inchurch-ios-challenge-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-inchurch-ios-challenge/Pods-inchurch-ios-challenge-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		BE2443B1A2D6129B26538D29 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;

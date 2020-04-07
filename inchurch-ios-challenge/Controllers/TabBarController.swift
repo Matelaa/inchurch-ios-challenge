@@ -12,8 +12,6 @@ class TabBarController: UITabBarController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
         
         let firstViewController = HomeViewController()
         firstViewController.tabBarItem = UITabBarItem(title: L10n.Home.title, image: Asset.icHome.image, tag: 0)
@@ -25,16 +23,4 @@ class TabBarController: UITabBarController {
     
         self.viewControllers = tabBarList.map({ UINavigationController(rootViewController: $0) })
     }
-    
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
 }
