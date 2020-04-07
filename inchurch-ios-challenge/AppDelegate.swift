@@ -8,6 +8,9 @@
 
 import UIKit
 
+let baseURL = "https://api.themoviedb.org/3"
+let apiKey = "969c8429364a3270fe76ae86d6a3d6c9"
+
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
