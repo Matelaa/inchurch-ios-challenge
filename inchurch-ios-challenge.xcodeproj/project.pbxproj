@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -12,6 +12,7 @@
 		F26E04D0243C0D7B0008CCDF /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F26E04CF243C0D7B0008CCDF /* SceneDelegate.swift */; };
 		F26E04D2243C0D7B0008CCDF /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F26E04D1243C0D7B0008CCDF /* HomeViewController.swift */; };
 		F26E04DA243C0D7C0008CCDF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F26E04D8243C0D7C0008CCDF /* LaunchScreen.storyboard */; };
+		F2811A1C243D7D0F00EEC86A /* MovieCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2811A1B243D7D0F00EEC86A /* MovieCollectionViewCell.swift */; };
 		F2D8E6B1243C348C00D03FC1 /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2D8E6B0243C348C00D03FC1 /* TabBarController.swift */; };
 		F2D8E6B3243C34EC00D03FC1 /* FavoritesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2D8E6B2243C34EC00D03FC1 /* FavoritesViewController.swift */; };
 		F2F21D19243C21AB0016EA4C /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = F2F21D16243C21AB0016EA4C /* Localizable.strings */; };
@@ -32,6 +33,7 @@
 		F26E04D1243C0D7B0008CCDF /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		F26E04D9243C0D7C0008CCDF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F26E04DB243C0D7C0008CCDF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F2811A1B243D7D0F00EEC86A /* MovieCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieCollectionViewCell.swift; sourceTree = "<group>"; };
 		F2D8E6B0243C348C00D03FC1 /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
 		F2D8E6B2243C34EC00D03FC1 /* FavoritesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesViewController.swift; sourceTree = "<group>"; };
 		F2F21D16243C21AB0016EA4C /* Localizable.strings */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; name = Localizable.strings; path = "inchurch-ios-challenge/Application/Resources/Generators/Localizable.strings"; sourceTree = SOURCE_ROOT; };
@@ -152,6 +154,14 @@
 			path = "inchurch-ios-challenge";
 			sourceTree = "<group>";
 		};
+		F2811A1A243D7C9700EEC86A /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				F2811A1B243D7D0F00EEC86A /* MovieCollectionViewCell.swift */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
 		F293F1D8243C1BDD000F15DA /* Resources */ = {
 			isa = PBXGroup;
 			children = (
@@ -186,6 +196,7 @@
 		F2EBF74F243CF17400ADE462 /* Home */ = {
 			isa = PBXGroup;
 			children = (
+				F2811A1A243D7C9700EEC86A /* Cell */,
 				F26E04D1243C0D7B0008CCDF /* HomeViewController.swift */,
 			);
 			path = Home;
@@ -340,6 +351,7 @@
 				F2F21D20243C21C40016EA4C /* Assets.swift in Sources */,
 				F26E04CE243C0D7B0008CCDF /* AppDelegate.swift in Sources */,
 				F2D8E6B1243C348C00D03FC1 /* TabBarController.swift in Sources */,
+				F2811A1C243D7D0F00EEC86A /* MovieCollectionViewCell.swift in Sources */,
 				F26E04D0243C0D7B0008CCDF /* SceneDelegate.swift in Sources */,
 				F2F21D1F243C21C40016EA4C /* Strings.swift in Sources */,
 			);
