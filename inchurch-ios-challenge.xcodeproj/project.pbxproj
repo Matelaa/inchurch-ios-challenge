@@ -15,6 +15,7 @@
 		F2811A1C243D7D0F00EEC86A /* MovieCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2811A1B243D7D0F00EEC86A /* MovieCollectionViewCell.swift */; };
 		F2D8E6B1243C348C00D03FC1 /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2D8E6B0243C348C00D03FC1 /* TabBarController.swift */; };
 		F2D8E6B3243C34EC00D03FC1 /* FavoritesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2D8E6B2243C34EC00D03FC1 /* FavoritesViewController.swift */; };
+		F2DB3297243E31E100AB4588 /* Movie.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2DB3296243E31E100AB4588 /* Movie.swift */; };
 		F2F21D19243C21AB0016EA4C /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = F2F21D16243C21AB0016EA4C /* Localizable.strings */; };
 		F2F21D1A243C21AB0016EA4C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F2F21D17243C21AB0016EA4C /* Assets.xcassets */; };
 		F2F21D1B243C21AB0016EA4C /* colors.txt in Resources */ = {isa = PBXBuildFile; fileRef = F2F21D18243C21AB0016EA4C /* colors.txt */; };
@@ -36,6 +37,7 @@
 		F2811A1B243D7D0F00EEC86A /* MovieCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieCollectionViewCell.swift; sourceTree = "<group>"; };
 		F2D8E6B0243C348C00D03FC1 /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
 		F2D8E6B2243C34EC00D03FC1 /* FavoritesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesViewController.swift; sourceTree = "<group>"; };
+		F2DB3296243E31E100AB4588 /* Movie.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Movie.swift; sourceTree = "<group>"; };
 		F2F21D16243C21AB0016EA4C /* Localizable.strings */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; name = Localizable.strings; path = "inchurch-ios-challenge/Application/Resources/Generators/Localizable.strings"; sourceTree = SOURCE_ROOT; };
 		F2F21D17243C21AB0016EA4C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = "inchurch-ios-challenge/Application/Resources/Generators/Assets.xcassets"; sourceTree = SOURCE_ROOT; };
 		F2F21D18243C21AB0016EA4C /* colors.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = colors.txt; path = "inchurch-ios-challenge/Application/Resources/Generators/colors.txt"; sourceTree = SOURCE_ROOT; };
@@ -96,6 +98,7 @@
 		F2194CA8243C11AE000A068E /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				F2DB3296243E31E100AB4588 /* Movie.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -349,6 +352,7 @@
 				F26E04D2243C0D7B0008CCDF /* HomeViewController.swift in Sources */,
 				F2F21D21243C21C40016EA4C /* Colors.swift in Sources */,
 				F2F21D20243C21C40016EA4C /* Assets.swift in Sources */,
+				F2DB3297243E31E100AB4588 /* Movie.swift in Sources */,
 				F26E04CE243C0D7B0008CCDF /* AppDelegate.swift in Sources */,
 				F2D8E6B1243C348C00D03FC1 /* TabBarController.swift in Sources */,
 				F2811A1C243D7D0F00EEC86A /* MovieCollectionViewCell.swift in Sources */,
