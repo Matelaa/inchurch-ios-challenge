@@ -7,9 +7,12 @@
 //
 
 import UIKit
+import RealmSwift
 
 let baseURL = "https://api.themoviedb.org/3"
 let apiKey = "969c8429364a3270fe76ae86d6a3d6c9"
+let imageBaseURL = "https://image.tmdb.org/t/p/original"
+var uiRealm: Realm!
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -22,6 +25,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         self.window = UIWindow(frame: UIScreen.main.bounds)
         self.window?.makeKeyAndVisible()
         self.window?.rootViewController = TabBarController()
+        
+        self.migrateDatabase()
         
         return true
     }
@@ -40,6 +45,15 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Use this method to release any resources that were specific to the discarded scenes, as they will not return.
     }
 
-
+    func migrateDatabase() {
+        do {
+            try uiRealm = Realm()
+        } catch {
+            uiRealm = try! Realm()
+        }
+        
+        print("Documents: ", Realm.Configuration.defaultConfiguration.fileURL ?? "")
+    }
+    
 }
 
