@@ -7,3 +7,7 @@
 //
 
 import Foundation
+
+public enum ResponseType {
+    case getBestRatedMovies
+}
