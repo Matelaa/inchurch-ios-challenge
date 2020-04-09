@@ -17,8 +17,13 @@ class HomeViewController: UIViewController {
         return collectionView
     }()
     
+    var service: MovieService!
+    var movies: [MovieView] = []
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.service = MovieService(delegate: self)
+        self.service.getBestRatedMovies()
         self.setupView()
     }
     
@@ -50,9 +55,37 @@ class HomeViewController: UIViewController {
     }
 }
 
+extension HomeViewController: StatefulViewController, BackingViewProvider {
+    var backingView: UIView {
+        return self.collectionView
+    }
+    
+    func hasContent() -> Bool {
+        return !self.movies.isEmpty
+    }
+    
+    func success(_ type: ResponseType) {
+        switch type {
+        case .getBestRatedMovies:
+            self.movies = MovieViewModel.getAll()
+            self.collectionView.reloadData()
+            self.update(emptyText: L10n.EmptyText.default)
+            print("deu certo")
+        default:
+            break
+        }
+        self.endLoading()
+    }
+    
+    func failure(_ type: ResponseType, error: String?) {
+        self.endLoading()
+        print("deu ruim")
+    }
+}
+
 extension HomeViewController: UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 6
+        return self.movies.count
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
@@ -62,7 +95,7 @@ extension HomeViewController: UICollectionViewDelegate, UICollectionViewDataSour
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(for: indexPath) as MovieCollectionViewCell
-        cell.bind()
+        cell.bind(movie: self.movies[indexPath.item])
         cell.backgroundColor = .blue
         return cell
     }
