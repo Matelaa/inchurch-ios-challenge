@@ -7,3 +7,12 @@
 //
 
 import Foundation
+import Alamofire
+
+class MovieRequestFactory {
+    
+    static func getBestRatedMovies() -> DataRequest {
+        let params: Parameters = ["api_key": apiKey]
+        return Alamofire.request(baseURL + "/movie/popular", method: .get, parameters: params)
+    }
+}
