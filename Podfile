@@ -10,5 +10,6 @@ target 'inchurch-ios-challenge' do
   pod 'RealmSwift'
   pod 'Kingfisher'
   pod 'Reusable'
+  pod 'SpringIndicator'
   
 end
