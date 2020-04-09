@@ -17,6 +17,11 @@ internal enum L10n {
     internal static let title = L10n.tr("Localizable", "app.title")
   }
 
+  internal enum EmptyText {
+    /// No content
+    internal static let `default` = L10n.tr("Localizable", "emptyText.default")
+  }
+
   internal enum Favorites {
     /// Favorites
     internal static let title = L10n.tr("Localizable", "favorites.title")

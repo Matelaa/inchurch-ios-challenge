@@ -4,3 +4,6 @@
 // Screens Titles
 "home.title" = "Home";
 "favorites.title" = "Favorites";
+
+// Stateful
+"emptyText.default" = "No content";

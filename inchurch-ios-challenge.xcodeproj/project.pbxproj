@@ -8,6 +8,19 @@
 
 /* Begin PBXBuildFile section */
 		D0AFDA4C8A2727B2A56D432C /* Pods_inchurch_ios_challenge.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ADAF82B066978D671283B05F /* Pods_inchurch_ios_challenge.framework */; };
+		F231ED55243EB5E500E44DA2 /* MovieService.swift in Sources */ = {isa = PBXBuildFile; fileRef = F231ED54243EB5E500E44DA2 /* MovieService.swift */; };
+		F231ED57243EB64C00E44DA2 /* Service.swift in Sources */ = {isa = PBXBuildFile; fileRef = F231ED56243EB64C00E44DA2 /* Service.swift */; };
+		F231ED60243EBC0200E44DA2 /* StatefulViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F231ED5A243EBC0200E44DA2 /* StatefulViewController.swift */; };
+		F231ED62243EBC0200E44DA2 /* ViewStateMachine.swift in Sources */ = {isa = PBXBuildFile; fileRef = F231ED5C243EBC0200E44DA2 /* ViewStateMachine.swift */; };
+		F231ED63243EBC0200E44DA2 /* StatefulViewControllerDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F231ED5D243EBC0200E44DA2 /* StatefulViewControllerDelegate.swift */; };
+		F231ED64243EBC0200E44DA2 /* StatefulPlaceholderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F231ED5E243EBC0200E44DA2 /* StatefulPlaceholderView.swift */; };
+		F231ED65243EBC0200E44DA2 /* StatefulViewControllerImplementation.swift in Sources */ = {isa = PBXBuildFile; fileRef = F231ED5F243EBC0200E44DA2 /* StatefulViewControllerImplementation.swift */; };
+		F231ED6B243EBC2F00E44DA2 /* LoadingView.xib in Resources */ = {isa = PBXBuildFile; fileRef = F231ED67243EBC2F00E44DA2 /* LoadingView.xib */; };
+		F231ED6C243EBC2F00E44DA2 /* LoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F231ED68243EBC2F00E44DA2 /* LoadingView.swift */; };
+		F231ED6D243EBC2F00E44DA2 /* EmptyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F231ED69243EBC2F00E44DA2 /* EmptyView.swift */; };
+		F231ED6E243EBC2F00E44DA2 /* EmptyView.xib in Resources */ = {isa = PBXBuildFile; fileRef = F231ED6A243EBC2F00E44DA2 /* EmptyView.xib */; };
+		F231ED70243EBD6400E44DA2 /* ResponseType.swift in Sources */ = {isa = PBXBuildFile; fileRef = F231ED6F243EBD6400E44DA2 /* ResponseType.swift */; };
+		F231ED72243EBED500E44DA2 /* MovieViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F231ED71243EBED500E44DA2 /* MovieViewModel.swift */; };
 		F26E04CE243C0D7B0008CCDF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F26E04CD243C0D7B0008CCDF /* AppDelegate.swift */; };
 		F26E04D0243C0D7B0008CCDF /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F26E04CF243C0D7B0008CCDF /* SceneDelegate.swift */; };
 		F26E04D2243C0D7B0008CCDF /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F26E04D1243C0D7B0008CCDF /* HomeViewController.swift */; };
@@ -16,6 +29,7 @@
 		F2D8E6B1243C348C00D03FC1 /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2D8E6B0243C348C00D03FC1 /* TabBarController.swift */; };
 		F2D8E6B3243C34EC00D03FC1 /* FavoritesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2D8E6B2243C34EC00D03FC1 /* FavoritesViewController.swift */; };
 		F2DB3297243E31E100AB4588 /* Movie.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2DB3296243E31E100AB4588 /* Movie.swift */; };
+		F2DB3299243E363D00AB4588 /* MovieRequestFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2DB3298243E363D00AB4588 /* MovieRequestFactory.swift */; };
 		F2F21D19243C21AB0016EA4C /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = F2F21D16243C21AB0016EA4C /* Localizable.strings */; };
 		F2F21D1A243C21AB0016EA4C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F2F21D17243C21AB0016EA4C /* Assets.xcassets */; };
 		F2F21D1B243C21AB0016EA4C /* colors.txt in Resources */ = {isa = PBXBuildFile; fileRef = F2F21D18243C21AB0016EA4C /* colors.txt */; };
@@ -28,6 +42,19 @@
 		0A4DF8BC6F48D5A92CC4AD49 /* Pods-inchurch-ios-challenge.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-inchurch-ios-challenge.debug.xcconfig"; path = "Target Support Files/Pods-inchurch-ios-challenge/Pods-inchurch-ios-challenge.debug.xcconfig"; sourceTree = "<group>"; };
 		ADAF82B066978D671283B05F /* Pods_inchurch_ios_challenge.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_inchurch_ios_challenge.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		AE7F325BBCBC8B340433BB67 /* Pods-inchurch-ios-challenge.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-inchurch-ios-challenge.release.xcconfig"; path = "Target Support Files/Pods-inchurch-ios-challenge/Pods-inchurch-ios-challenge.release.xcconfig"; sourceTree = "<group>"; };
+		F231ED54243EB5E500E44DA2 /* MovieService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieService.swift; sourceTree = "<group>"; };
+		F231ED56243EB64C00E44DA2 /* Service.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Service.swift; sourceTree = "<group>"; };
+		F231ED5A243EBC0200E44DA2 /* StatefulViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StatefulViewController.swift; sourceTree = "<group>"; };
+		F231ED5C243EBC0200E44DA2 /* ViewStateMachine.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewStateMachine.swift; sourceTree = "<group>"; };
+		F231ED5D243EBC0200E44DA2 /* StatefulViewControllerDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StatefulViewControllerDelegate.swift; sourceTree = "<group>"; };
+		F231ED5E243EBC0200E44DA2 /* StatefulPlaceholderView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StatefulPlaceholderView.swift; sourceTree = "<group>"; };
+		F231ED5F243EBC0200E44DA2 /* StatefulViewControllerImplementation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StatefulViewControllerImplementation.swift; sourceTree = "<group>"; };
+		F231ED67243EBC2F00E44DA2 /* LoadingView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = LoadingView.xib; path = "inchurch-ios-challenge/Application/Extensions/StatefulViewController/Views/LoadingView.xib"; sourceTree = SOURCE_ROOT; };
+		F231ED68243EBC2F00E44DA2 /* LoadingView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LoadingView.swift; path = "inchurch-ios-challenge/Application/Extensions/StatefulViewController/Views/LoadingView.swift"; sourceTree = SOURCE_ROOT; };
+		F231ED69243EBC2F00E44DA2 /* EmptyView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = EmptyView.swift; path = "inchurch-ios-challenge/Application/Extensions/StatefulViewController/Views/EmptyView.swift"; sourceTree = SOURCE_ROOT; };
+		F231ED6A243EBC2F00E44DA2 /* EmptyView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = EmptyView.xib; path = "inchurch-ios-challenge/Application/Extensions/StatefulViewController/Views/EmptyView.xib"; sourceTree = SOURCE_ROOT; };
+		F231ED6F243EBD6400E44DA2 /* ResponseType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResponseType.swift; sourceTree = "<group>"; };
+		F231ED71243EBED500E44DA2 /* MovieViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieViewModel.swift; sourceTree = "<group>"; };
 		F26E04CA243C0D7B0008CCDF /* inchurch-ios-challenge.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "inchurch-ios-challenge.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F26E04CD243C0D7B0008CCDF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F26E04CF243C0D7B0008CCDF /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -38,6 +65,7 @@
 		F2D8E6B0243C348C00D03FC1 /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
 		F2D8E6B2243C34EC00D03FC1 /* FavoritesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesViewController.swift; sourceTree = "<group>"; };
 		F2DB3296243E31E100AB4588 /* Movie.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Movie.swift; sourceTree = "<group>"; };
+		F2DB3298243E363D00AB4588 /* MovieRequestFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieRequestFactory.swift; sourceTree = "<group>"; };
 		F2F21D16243C21AB0016EA4C /* Localizable.strings */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; name = Localizable.strings; path = "inchurch-ios-challenge/Application/Resources/Generators/Localizable.strings"; sourceTree = SOURCE_ROOT; };
 		F2F21D17243C21AB0016EA4C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = "inchurch-ios-challenge/Application/Resources/Generators/Assets.xcassets"; sourceTree = SOURCE_ROOT; };
 		F2F21D18243C21AB0016EA4C /* colors.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = colors.txt; path = "inchurch-ios-challenge/Application/Resources/Generators/colors.txt"; sourceTree = SOURCE_ROOT; };
@@ -78,9 +106,12 @@
 		F2194CA5243C10BC000A068E /* Application */ = {
 			isa = PBXGroup;
 			children = (
+				F231ED58243EBB6F00E44DA2 /* Extensions */,
 				F26E04CF243C0D7B0008CCDF /* SceneDelegate.swift */,
 				F26E04CD243C0D7B0008CCDF /* AppDelegate.swift */,
 				F293F1D8243C1BDD000F15DA /* Resources */,
+				F231ED56243EB64C00E44DA2 /* Service.swift */,
+				F231ED6F243EBD6400E44DA2 /* ResponseType.swift */,
 			);
 			path = Application;
 			sourceTree = "<group>";
@@ -106,6 +137,8 @@
 		F2194CA9243C11BC000A068E /* Service */ = {
 			isa = PBXGroup;
 			children = (
+				F2DB3298243E363D00AB4588 /* MovieRequestFactory.swift */,
+				F231ED54243EB5E500E44DA2 /* MovieService.swift */,
 			);
 			path = Service;
 			sourceTree = "<group>";
@@ -113,6 +146,7 @@
 		F2194CAA243C11C6000A068E /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				F231ED71243EBED500E44DA2 /* MovieViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -123,6 +157,38 @@
 				F26E04D8243C0D7C0008CCDF /* LaunchScreen.storyboard */,
 			);
 			path = Base;
+			sourceTree = "<group>";
+		};
+		F231ED58243EBB6F00E44DA2 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				F231ED59243EBB8100E44DA2 /* StatefulViewController */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		F231ED59243EBB8100E44DA2 /* StatefulViewController */ = {
+			isa = PBXGroup;
+			children = (
+				F231ED5E243EBC0200E44DA2 /* StatefulPlaceholderView.swift */,
+				F231ED5A243EBC0200E44DA2 /* StatefulViewController.swift */,
+				F231ED5D243EBC0200E44DA2 /* StatefulViewControllerDelegate.swift */,
+				F231ED5F243EBC0200E44DA2 /* StatefulViewControllerImplementation.swift */,
+				F231ED66243EBC1B00E44DA2 /* Views */,
+				F231ED5C243EBC0200E44DA2 /* ViewStateMachine.swift */,
+			);
+			path = StatefulViewController;
+			sourceTree = "<group>";
+		};
+		F231ED66243EBC1B00E44DA2 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				F231ED69243EBC2F00E44DA2 /* EmptyView.swift */,
+				F231ED6A243EBC2F00E44DA2 /* EmptyView.xib */,
+				F231ED68243EBC2F00E44DA2 /* LoadingView.swift */,
+				F231ED67243EBC2F00E44DA2 /* LoadingView.xib */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 		F26E04C1243C0D7B0008CCDF = {
@@ -277,6 +343,8 @@
 				F2F21D19243C21AB0016EA4C /* Localizable.strings in Resources */,
 				F2F21D1B243C21AB0016EA4C /* colors.txt in Resources */,
 				F26E04DA243C0D7C0008CCDF /* LaunchScreen.storyboard in Resources */,
+				F231ED6E243EBC2F00E44DA2 /* EmptyView.xib in Resources */,
+				F231ED6B243EBC2F00E44DA2 /* LoadingView.xib in Resources */,
 				F2F21D1A243C21AB0016EA4C /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -349,15 +417,27 @@
 			buildActionMask = 2147483647;
 			files = (
 				F2D8E6B3243C34EC00D03FC1 /* FavoritesViewController.swift in Sources */,
+				F231ED63243EBC0200E44DA2 /* StatefulViewControllerDelegate.swift in Sources */,
+				F231ED57243EB64C00E44DA2 /* Service.swift in Sources */,
 				F26E04D2243C0D7B0008CCDF /* HomeViewController.swift in Sources */,
 				F2F21D21243C21C40016EA4C /* Colors.swift in Sources */,
 				F2F21D20243C21C40016EA4C /* Assets.swift in Sources */,
+				F2DB3299243E363D00AB4588 /* MovieRequestFactory.swift in Sources */,
 				F2DB3297243E31E100AB4588 /* Movie.swift in Sources */,
+				F231ED62243EBC0200E44DA2 /* ViewStateMachine.swift in Sources */,
+				F231ED55243EB5E500E44DA2 /* MovieService.swift in Sources */,
+				F231ED65243EBC0200E44DA2 /* StatefulViewControllerImplementation.swift in Sources */,
 				F26E04CE243C0D7B0008CCDF /* AppDelegate.swift in Sources */,
 				F2D8E6B1243C348C00D03FC1 /* TabBarController.swift in Sources */,
+				F231ED60243EBC0200E44DA2 /* StatefulViewController.swift in Sources */,
+				F231ED64243EBC0200E44DA2 /* StatefulPlaceholderView.swift in Sources */,
 				F2811A1C243D7D0F00EEC86A /* MovieCollectionViewCell.swift in Sources */,
+				F231ED6D243EBC2F00E44DA2 /* EmptyView.swift in Sources */,
 				F26E04D0243C0D7B0008CCDF /* SceneDelegate.swift in Sources */,
+				F231ED6C243EBC2F00E44DA2 /* LoadingView.swift in Sources */,
+				F231ED72243EBED500E44DA2 /* MovieViewModel.swift in Sources */,
 				F2F21D1F243C21C40016EA4C /* Strings.swift in Sources */,
+				F231ED70243EBD6400E44DA2 /* ResponseType.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
