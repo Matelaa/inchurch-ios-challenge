@@ -32,6 +32,8 @@ class MovieCollectionViewCell: UICollectionViewCell, Reusable {
     private let nameMovie: UILabel = {
         let label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
+        label.lineBreakMode = .byWordWrapping
+        label.numberOfLines = 0
         label.textColor = .black
         return label
     }()
@@ -45,8 +47,8 @@ class MovieCollectionViewCell: UICollectionViewCell, Reusable {
         fatalError("init(coder:) has not been implemented")
     }
     
-    func bind() {
-        self.nameMovie.text = "Teste"
+    func bind(movie: MovieView) {
+        self.nameMovie.text = movie.title
     }
     
     private func configureCell() {
@@ -97,7 +99,9 @@ class MovieCollectionViewCell: UICollectionViewCell, Reusable {
         NSLayoutConstraint.activate([
 //            self.nameMovie.centerXAnchor.constraint(equalTo: self.bottomView.centerXAnchor),
             self.nameMovie.centerYAnchor.constraint(equalTo: self.bottomView.centerYAnchor),
-            self.nameMovie.leftAnchor.constraint(equalTo: self.bottomView.leftAnchor, constant: 12)
+            self.nameMovie.leftAnchor.constraint(equalTo: self.bottomView.leftAnchor, constant: 12),
+            self.nameMovie.rightAnchor.constraint(equalTo: self.bottomView.rightAnchor),
+            self.nameMovie.bottomAnchor.constraint(equalTo: self.bottomView.bottomAnchor)
         ])
     }
 }
