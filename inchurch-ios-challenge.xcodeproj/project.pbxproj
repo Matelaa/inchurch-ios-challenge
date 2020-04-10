@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		D0AFDA4C8A2727B2A56D432C /* Pods_inchurch_ios_challenge.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ADAF82B066978D671283B05F /* Pods_inchurch_ios_challenge.framework */; };
+		F204E65E243F801A00DD082A /* Message.swift in Sources */ = {isa = PBXBuildFile; fileRef = F204E65D243F801A00DD082A /* Message.swift */; };
+		F204E660243F806600DD082A /* ImageAsset.swift in Sources */ = {isa = PBXBuildFile; fileRef = F204E65F243F806600DD082A /* ImageAsset.swift */; };
+		F204E662243F807100DD082A /* ImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F204E661243F807100DD082A /* ImageView.swift */; };
 		F231ED55243EB5E500E44DA2 /* MovieService.swift in Sources */ = {isa = PBXBuildFile; fileRef = F231ED54243EB5E500E44DA2 /* MovieService.swift */; };
 		F231ED57243EB64C00E44DA2 /* Service.swift in Sources */ = {isa = PBXBuildFile; fileRef = F231ED56243EB64C00E44DA2 /* Service.swift */; };
 		F231ED60243EBC0200E44DA2 /* StatefulViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F231ED5A243EBC0200E44DA2 /* StatefulViewController.swift */; };
@@ -36,12 +39,17 @@
 		F2F21D1F243C21C40016EA4C /* Strings.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2F21D1C243C21C40016EA4C /* Strings.swift */; };
 		F2F21D20243C21C40016EA4C /* Assets.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2F21D1D243C21C40016EA4C /* Assets.swift */; };
 		F2F21D21243C21C40016EA4C /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2F21D1E243C21C40016EA4C /* Colors.swift */; };
+		F2F223E32440E14E00C063EE /* DetailMovieViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2F223E22440E14E00C063EE /* DetailMovieViewController.swift */; };
+		F2F223E62440F07100C063EE /* FavoritesTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2F223E52440F07100C063EE /* FavoritesTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		0A4DF8BC6F48D5A92CC4AD49 /* Pods-inchurch-ios-challenge.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-inchurch-ios-challenge.debug.xcconfig"; path = "Target Support Files/Pods-inchurch-ios-challenge/Pods-inchurch-ios-challenge.debug.xcconfig"; sourceTree = "<group>"; };
 		ADAF82B066978D671283B05F /* Pods_inchurch_ios_challenge.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_inchurch_ios_challenge.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		AE7F325BBCBC8B340433BB67 /* Pods-inchurch-ios-challenge.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-inchurch-ios-challenge.release.xcconfig"; path = "Target Support Files/Pods-inchurch-ios-challenge/Pods-inchurch-ios-challenge.release.xcconfig"; sourceTree = "<group>"; };
+		F204E65D243F801A00DD082A /* Message.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Message.swift; sourceTree = "<group>"; };
+		F204E65F243F806600DD082A /* ImageAsset.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageAsset.swift; sourceTree = "<group>"; };
+		F204E661243F807100DD082A /* ImageView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageView.swift; sourceTree = "<group>"; };
 		F231ED54243EB5E500E44DA2 /* MovieService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieService.swift; sourceTree = "<group>"; };
 		F231ED56243EB64C00E44DA2 /* Service.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Service.swift; sourceTree = "<group>"; };
 		F231ED5A243EBC0200E44DA2 /* StatefulViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StatefulViewController.swift; sourceTree = "<group>"; };
@@ -72,6 +80,8 @@
 		F2F21D1C243C21C40016EA4C /* Strings.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Strings.swift; path = "inchurch-ios-challenge/Application/Resources/Generated/Strings.swift"; sourceTree = SOURCE_ROOT; };
 		F2F21D1D243C21C40016EA4C /* Assets.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Assets.swift; path = "inchurch-ios-challenge/Application/Resources/Generated/Assets.swift"; sourceTree = SOURCE_ROOT; };
 		F2F21D1E243C21C40016EA4C /* Colors.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Colors.swift; path = "inchurch-ios-challenge/Application/Resources/Generated/Colors.swift"; sourceTree = SOURCE_ROOT; };
+		F2F223E22440E14E00C063EE /* DetailMovieViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailMovieViewController.swift; sourceTree = "<group>"; };
+		F2F223E52440F07100C063EE /* FavoritesTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -107,6 +117,7 @@
 			isa = PBXGroup;
 			children = (
 				F231ED58243EBB6F00E44DA2 /* Extensions */,
+				F204E65D243F801A00DD082A /* Message.swift */,
 				F26E04CF243C0D7B0008CCDF /* SceneDelegate.swift */,
 				F26E04CD243C0D7B0008CCDF /* AppDelegate.swift */,
 				F293F1D8243C1BDD000F15DA /* Resources */,
@@ -119,6 +130,7 @@
 		F2194CA7243C119E000A068E /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				F2F223E22440E14E00C063EE /* DetailMovieViewController.swift */,
 				F2D8E6B0243C348C00D03FC1 /* TabBarController.swift */,
 				F2EBF750243CF19300ADE462 /* Favorites */,
 				F2EBF74F243CF17400ADE462 /* Home */,
@@ -162,6 +174,8 @@
 		F231ED58243EBB6F00E44DA2 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				F204E661243F807100DD082A /* ImageView.swift */,
+				F204E65F243F806600DD082A /* ImageAsset.swift */,
 				F231ED59243EBB8100E44DA2 /* StatefulViewController */,
 			);
 			path = Extensions;
@@ -274,9 +288,18 @@
 		F2EBF750243CF19300ADE462 /* Favorites */ = {
 			isa = PBXGroup;
 			children = (
+				F2F223E42440F04900C063EE /* Cell */,
 				F2D8E6B2243C34EC00D03FC1 /* FavoritesViewController.swift */,
 			);
 			path = Favorites;
+			sourceTree = "<group>";
+		};
+		F2F223E42440F04900C063EE /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				F2F223E52440F07100C063EE /* FavoritesTableViewCell.swift */,
+			);
+			path = Cell;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -416,12 +439,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F204E662243F807100DD082A /* ImageView.swift in Sources */,
+				F2F223E62440F07100C063EE /* FavoritesTableViewCell.swift in Sources */,
 				F2D8E6B3243C34EC00D03FC1 /* FavoritesViewController.swift in Sources */,
 				F231ED63243EBC0200E44DA2 /* StatefulViewControllerDelegate.swift in Sources */,
 				F231ED57243EB64C00E44DA2 /* Service.swift in Sources */,
+				F2F223E32440E14E00C063EE /* DetailMovieViewController.swift in Sources */,
 				F26E04D2243C0D7B0008CCDF /* HomeViewController.swift in Sources */,
 				F2F21D21243C21C40016EA4C /* Colors.swift in Sources */,
 				F2F21D20243C21C40016EA4C /* Assets.swift in Sources */,
+				F204E660243F806600DD082A /* ImageAsset.swift in Sources */,
 				F2DB3299243E363D00AB4588 /* MovieRequestFactory.swift in Sources */,
 				F2DB3297243E31E100AB4588 /* Movie.swift in Sources */,
 				F231ED62243EBC0200E44DA2 /* ViewStateMachine.swift in Sources */,
@@ -433,6 +460,7 @@
 				F231ED64243EBC0200E44DA2 /* StatefulPlaceholderView.swift in Sources */,
 				F2811A1C243D7D0F00EEC86A /* MovieCollectionViewCell.swift in Sources */,
 				F231ED6D243EBC2F00E44DA2 /* EmptyView.swift in Sources */,
+				F204E65E243F801A00DD082A /* Message.swift in Sources */,
 				F26E04D0243C0D7B0008CCDF /* SceneDelegate.swift in Sources */,
 				F231ED6C243EBC2F00E44DA2 /* LoadingView.swift in Sources */,
 				F231ED72243EBED500E44DA2 /* MovieViewModel.swift in Sources */,
