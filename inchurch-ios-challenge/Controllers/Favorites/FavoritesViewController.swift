@@ -28,6 +28,12 @@ class FavoritesViewController: UIViewController {
         self.setupView()
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        self.movies = MovieViewModel.getFavorites()
+        self.tableView.reloadData()
+    }
+    
     private func setupTableView() {
         self.tableView.delegate = self
         self.tableView.dataSource = self
@@ -53,7 +59,18 @@ class FavoritesViewController: UIViewController {
 
 extension FavoritesViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return self.movies.count
+        if self.movies.count == 0 {
+            let emptyLabel = UILabel(frame: CGRect(x: 0, y: 0, width: self.view.bounds.size.width, height: self.view.bounds.size.height))
+            emptyLabel.text = L10n.Favorites.TableView.empty
+            emptyLabel.textAlignment = .center
+            emptyLabel.textColor = .white
+            self.tableView.backgroundView = emptyLabel
+            self.tableView.separatorStyle = .none
+            return 0
+        } else {
+            self.tableView.backgroundView = nil
+            return self.movies.count
+        }
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -64,5 +81,15 @@ extension FavoritesViewController: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 200
+    }
+    
+    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
+        if editingStyle == .delete {
+            var movie = self.movies.remove(at: indexPath.row)
+            movie = MovieViewModel.favoriteMovie(by: movie.id)
+            tableView.deleteRows(at: [indexPath], with: .fade)
+            self.tableView.reloadData()
+            self.movies = MovieViewModel.getAll()
+        }
     }
 }
