@@ -28,7 +28,6 @@ class MovieService: Service {
                 if let movies = response.result.value {
                     MovieViewModel.deleteAll()
                     MovieViewModel.saveAll(movies: movies)
-                    print(movies)
                 }
                 
                 self.delegate.success(.getBestRatedMovies)
