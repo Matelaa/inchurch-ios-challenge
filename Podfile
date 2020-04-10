@@ -11,5 +11,6 @@ target 'inchurch-ios-challenge' do
   pod 'Kingfisher'
   pod 'Reusable'
   pod 'SpringIndicator'
+  pod 'SwiftMessages'
   
 end
