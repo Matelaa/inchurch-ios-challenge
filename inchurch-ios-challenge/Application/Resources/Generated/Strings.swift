@@ -17,6 +17,13 @@ internal enum L10n {
     internal static let title = L10n.tr("Localizable", "app.title")
   }
 
+  internal enum Detail {
+    /// Release date: %@
+    internal static func releaseDate(_ p1: String) -> String {
+      return L10n.tr("Localizable", "detail.releaseDate", p1)
+    }
+  }
+
   internal enum EmptyText {
     /// No content
     internal static let `default` = L10n.tr("Localizable", "emptyText.default")
@@ -25,6 +32,10 @@ internal enum L10n {
   internal enum Favorites {
     /// Favorites
     internal static let title = L10n.tr("Localizable", "favorites.title")
+    internal enum TableView {
+      /// You do not have any favorites yet.
+      internal static let empty = L10n.tr("Localizable", "favorites.tableView.empty")
+    }
   }
 
   internal enum Home {

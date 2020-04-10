@@ -7,3 +7,9 @@
 
 // Stateful
 "emptyText.default" = "No content";
+
+// Favorites Controller
+"favorites.tableView.empty" = "You do not have any favorites yet.";
+
+// Detail Controller
+"detail.releaseDate" = "Release date: %@";
