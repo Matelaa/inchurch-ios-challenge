@@ -65,6 +65,10 @@ class MovieViewModel {
         return self.getAsView(sequence: self.get())
     }
     
+    static func getFavorites() -> [MovieView] {
+        return self.getAll().filter({ $0.favorite })
+    }
+    
     static func deleteAll() {
         let objects = self.get().filter { (movie) -> Bool in
             if let favorite = movie.favorite.value {
