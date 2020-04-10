@@ -77,6 +77,16 @@ class MovieViewModel {
         }
     }
     
+    static func favoriteMovie(by id: Int) -> MovieView {
+        let movie = uiRealm.object(ofType: Movie.self, forPrimaryKey: id)
+        if let favorite = movie?.favorite.value {
+            try! uiRealm.write {
+                movie?.favorite.value = !favorite
+            }
+        }
+        return self.getAsView(movie: movie)
+    }
+    
     static func get() -> [Movie] {
         let objects = uiRealm.objects(Movie.self).sorted(byKeyPath: "title")
         var movies: [Movie] = []
