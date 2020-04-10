@@ -8,6 +8,11 @@
 
 import UIKit
 import Reusable
+import Kingfisher
+
+protocol MovieCollectionViewCellDelegate {
+    func updateFavoriteMovies()
+}
 
 class MovieCollectionViewCell: UICollectionViewCell, Reusable {
     
@@ -33,10 +38,21 @@ class MovieCollectionViewCell: UICollectionViewCell, Reusable {
         let label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
         label.lineBreakMode = .byWordWrapping
-        label.numberOfLines = 0
-        label.textColor = .black
+        label.numberOfLines = 2
+        label.textColor = .white
         return label
     }()
+    
+    private let favorite: UIButton = {
+        let button = UIButton()
+        button.translatesAutoresizingMaskIntoConstraints = false
+        button.setTitle("", for: .normal)
+        button.addTarget(self, action: #selector(MovieCollectionViewCell.favoriteMovie), for: .touchUpInside)
+        return button
+    }()
+    
+    var movie: MovieView!
+    var delegate: MovieCollectionViewCellDelegate!
     
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -48,6 +64,9 @@ class MovieCollectionViewCell: UICollectionViewCell, Reusable {
     }
     
     func bind(movie: MovieView) {
+        self.movie = movie
+        self.pictureMovie.setImage(movie.imageUrl)
+        self.favorite.setImage(self.movie.favorite ? Asset.icStarFull.image : Asset.icStar.image, for: .normal)
         self.nameMovie.text = movie.title
     }
     
@@ -56,11 +75,29 @@ class MovieCollectionViewCell: UICollectionViewCell, Reusable {
         self.view.addSubview(self.pictureMovie)
         self.view.addSubview(self.bottomView)
         self.bottomView.addSubview(self.nameMovie)
+        self.bottomView.addSubview(self.favorite)
         
         self.setupViewConstraints()
         self.setupPictureMovieConstraints()
         self.setupBottomViewConstraints()
         self.setupNameMovieConstraints()
+        self.setupFavoriteButtonConstraints()
+        
+        self.customizeCell()
+    }
+    
+    private func customizeCell() {
+        self.view.layer.cornerRadius = 12
+        self.view.layer.borderWidth = 1
+        self.view.layer.borderColor = UIColor.clear.cgColor
+        self.view.layer.masksToBounds = true
+        
+        self.layer.shadowColor = UIColor.white.cgColor
+        self.layer.shadowOffset = CGSize(width: 0, height: 2)
+        self.layer.shadowRadius = 2
+        self.layer.shadowOpacity = 1
+        self.layer.masksToBounds = false
+        self.layer.shadowPath = UIBezierPath(roundedRect: self.bounds, cornerRadius: self.view.layer.cornerRadius).cgPath
     }
     
     private func setupViewConstraints() {
@@ -70,7 +107,6 @@ class MovieCollectionViewCell: UICollectionViewCell, Reusable {
             self.view.rightAnchor.constraint(equalTo: self.rightAnchor),
             self.view.bottomAnchor.constraint(equalTo: self.bottomAnchor)
         ])
-        self.view.backgroundColor = .green
     }
     
     private func setupPictureMovieConstraints() {
@@ -81,7 +117,6 @@ class MovieCollectionViewCell: UICollectionViewCell, Reusable {
             self.pictureMovie.centerXAnchor.constraint(equalTo: self.view.centerXAnchor),
             self.pictureMovie.centerYAnchor.constraint(equalTo: self.view.centerYAnchor)
         ])
-        self.pictureMovie.backgroundColor = .orange
     }
 
     private func setupBottomViewConstraints() {
@@ -92,16 +127,33 @@ class MovieCollectionViewCell: UICollectionViewCell, Reusable {
             self.bottomView.rightAnchor.constraint(equalTo: self.view.rightAnchor),
             self.bottomView.bottomAnchor.constraint(equalTo: self.view.bottomAnchor)
         ])
-        self.bottomView.backgroundColor = .red
+        self.bottomView.backgroundColor = .gray
     }
     
     private func setupNameMovieConstraints() {
         NSLayoutConstraint.activate([
-//            self.nameMovie.centerXAnchor.constraint(equalTo: self.bottomView.centerXAnchor),
             self.nameMovie.centerYAnchor.constraint(equalTo: self.bottomView.centerYAnchor),
+            self.nameMovie.topAnchor.constraint(equalTo: self.bottomView.topAnchor),
             self.nameMovie.leftAnchor.constraint(equalTo: self.bottomView.leftAnchor, constant: 12),
-            self.nameMovie.rightAnchor.constraint(equalTo: self.bottomView.rightAnchor),
             self.nameMovie.bottomAnchor.constraint(equalTo: self.bottomView.bottomAnchor)
         ])
+    }
+    
+    private func setupFavoriteButtonConstraints() {
+        NSLayoutConstraint.activate([
+            self.favorite.centerYAnchor.constraint(equalTo: self.bottomView.centerYAnchor),
+            self.favorite.leftAnchor.constraint(equalTo: self.nameMovie.rightAnchor, constant: 20),
+            self.favorite.rightAnchor.constraint(equalTo: self.bottomView.rightAnchor, constant: -10),
+            self.favorite.heightAnchor.constraint(equalToConstant: 26),
+            self.favorite.widthAnchor.constraint(equalToConstant: 26)
+        ])
+        self.favorite.tintColor = .yellow
+        self.favorite.addTarget(self, action: #selector(MovieCollectionViewCell.favoriteMovie), for: .touchUpInside)
+    }
+    
+    @objc private func favoriteMovie() {
+        self.movie = MovieViewModel.favoriteMovie(by: self.movie.id)
+        self.delegate.updateFavoriteMovies()
+        self.favorite.setImage(self.movie.favorite ? Asset.icStarFull.image : Asset.icStar.image, for: .normal)
     }
 }
